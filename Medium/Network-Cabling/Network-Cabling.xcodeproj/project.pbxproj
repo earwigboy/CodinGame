@@ -8,23 +8,27 @@
 
 /* Begin PBXBuildFile section */
 		EFAE835C1E44931900C4C548 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EFAE835B1E44931900C4C548 /* main.cpp */; };
+		EFAE83631E4493BB00C4C548 /* input in Copy Files */ = {isa = PBXBuildFile; fileRef = EFAE83621E4493A700C4C548 /* input */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		EFAE83561E44931900C4C548 /* CopyFiles */ = {
+		EFAE83561E44931900C4C548 /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				EFAE83631E4493BB00C4C548 /* input in Copy Files */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EFAE83581E44931900C4C548 /* Network-Cabling */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Network-Cabling"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFAE835B1E44931900C4C548 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EFAE83621E4493A700C4C548 /* input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				EFAE835B1E44931900C4C548 /* main.cpp */,
+				EFAE83621E4493A700C4C548 /* input */,
 			);
 			path = "Network-Cabling";
 			sourceTree = "<group>";
@@ -71,7 +76,7 @@
 			buildPhases = (
 				EFAE83541E44931900C4C548 /* Sources */,
 				EFAE83551E44931900C4C548 /* Frameworks */,
-				EFAE83561E44931900C4C548 /* CopyFiles */,
+				EFAE83561E44931900C4C548 /* Copy Files */,
 			);
 			buildRules = (
 			);

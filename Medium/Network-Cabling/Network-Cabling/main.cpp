@@ -1,15 +1,36 @@
-//
-//  main.cpp
-//  Network-Cabling
-//
-//  Created by Alex James on 03/02/2017.
-//  Copyright © 2017 Alex James. All rights reserved.
-//
-
 #include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <fstream>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+using namespace std;
+
+
+int main()
+{
+    int N;
+    cin >> N; cin.ignore();
+    vector<long long int> yValues;
+    vector<long long int> xValues;
+    
+    for (int i = 0; i < N; i++) {
+        int X;
+        int Y;
+        
+        cin >> X >> Y; cin.ignore();
+        yValues.push_back(Y);
+        xValues.push_back(X);
+    }
+    nth_element(yValues.begin(), yValues.begin() + yValues.size()/2, yValues.end());
+    long long int median = yValues[yValues.size()/2];
+    long long int minX = *min_element(xValues.begin(), xValues.end());
+    long long int maxX = *max_element(xValues.begin(), xValues.end());
+    
+    long long int cableLength = maxX - minX;
+    
+    for (int i = 0; i < N; i++) {
+        cableLength += abs(median - yValues[i]);
+    }
+    cout << cableLength << endl;
 }
