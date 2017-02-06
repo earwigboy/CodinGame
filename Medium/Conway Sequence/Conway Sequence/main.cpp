@@ -5,29 +5,39 @@
 
 using namespace std;
 
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
-
-string conwayString(string a){
-    if (a.length() == 1)
-        return "1"+a;
+vector<int> conwayString(vector<int> a){
     
-    string result;
-    string head = a.substr(0,1);
-    string tail = a.substr(1, a.length()-1);
+    if (a.size() == 1)
+        return vector<int>{1,a[0]};
     
-    size_t count = tail.find_first_not_of(head);
+    vector<int> result, nextResult;
+    vector<int>::iterator head = a.begin();
+    vector<int>::iterator tail = a.begin()++;
     
-    if (count != string::npos){
-        string remainder = tail.substr(count, tail.length()-count);
-        return to_string(count+1) + head += conwayString(remainder);
+    // find the first element that is not the same as the head.
+    vector<int>::iterator tailsplit = find_if_not(tail, a.end(), [head](int i){return i == *head;});
+    
+    if (tailsplit != a.end()){
+        // Not everything is the same as head.
+        // Split the vector at the point values stop being the same as head.
+        vector<int> remainder(tailsplit,a.end());
+        // Calculate the distance between head and the split, this will be the count.
+        size_t index = distance(head,tailsplit);
+        // create a new vector with the two values, count of head and head.
+        result = vector<int>{(int)index, *head};
+        // Pass the remainder vector to the routine again to repeat the whole process.
+        nextResult = conwayString(remainder);
+        // Join the results of the next function call to the first result and return.
+        result.insert(result.end(),nextResult.begin(), nextResult.end());
+        return result;
     } else {
-        return to_string(tail.length()+1) + head;
+        // everything in the vector is the same
+        size_t index = distance(tail,a.end());
+        return vector<int>{(int)index, *head};
     }
-    //return result;
+    
 }
+
 int main()
 {
     int R;
@@ -36,10 +46,14 @@ int main()
     cin >> L; cin.ignore();
     
     string c = to_string(R);
-    for (int i = 0; i < L; i++)
-        c = conwayString(c);
-    // Write an action using cout. DON'T FORGET THE "<< endl"
-    // To debug: cerr << "Debug messages..." << endl;
+    vector<int> cc = {R};
+    for (int i = 0; i < L-1; i++)
+        cc = conwayString(cc);
     
-    cout << c << endl;
+    for (vector<int>::iterator it = cc.begin(); it != cc.end(); it++) {
+        if (it+1 == cc.end())
+            cout << *it << endl; // don't print a space character after the last element
+        else
+            cout << *it << " ";
+    }
 }
