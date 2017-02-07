@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EF6296771E48F45A00B912A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF6296761E48F45A00B912A0 /* main.cpp */; };
+		EF62967E1E490E9500B912A0 /* input in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF62967D1E490D2D00B912A0 /* input */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EF6296711E48F45A00B912A0 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				EF62967E1E490E9500B912A0 /* input in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF6296731E48F45A00B912A0 /* Dwarfs standing on the shoulders of giants */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Dwarfs standing on the shoulders of giants"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF6296761E48F45A00B912A0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF62967D1E490D2D00B912A0 /* input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				EF6296761E48F45A00B912A0 /* main.cpp */,
+				EF62967D1E490D2D00B912A0 /* input */,
 			);
 			path = "Dwarfs standing on the shoulders of giants";
 			sourceTree = "<group>";
