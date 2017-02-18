@@ -8,23 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		EF74EBD51E546A2B009655EB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EF74EBD41E546A2B009655EB /* main.cpp */; };
+		EF74EBDC1E55F809009655EB /* input in CopyFiles */ = {isa = PBXBuildFile; fileRef = EF74EBDB1E55F7E9009655EB /* input */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		EF74EBCF1E546A2B009655EB /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
 			files = (
+				EF74EBDC1E55F809009655EB /* input in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		EF74EBD11E546A2B009655EB /* The Labyrithn */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "The Labyrithn"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF74EBD41E546A2B009655EB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		EF74EBDB1E55F7E9009655EB /* input */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = input; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				EF74EBD41E546A2B009655EB /* main.cpp */,
+				EF74EBDB1E55F7E9009655EB /* input */,
 			);
 			path = "The Labyrithn";
 			sourceTree = "<group>";
@@ -246,6 +250,7 @@
 				EF74EBDA1E546A2B009655EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
